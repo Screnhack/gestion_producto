@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Articulo;
+use App\Detalle;
+use App\Investigador;
+use App\User;
 
 class InvestigadorController extends Controller
 {
@@ -14,6 +18,9 @@ class InvestigadorController extends Controller
     public function index()
     {
         //
+        $investigador = Investigador::search($request->name)->orderBy('id', 'ASC')->paginate(15);
+        return view('admin.investigador.index')
+                        ->with('investigador', $investigador);
     }
 
     /**
@@ -24,6 +31,7 @@ class InvestigadorController extends Controller
     public function create()
     {
         //
+        return view('admin.investigador.create');
     }
 
     /**
@@ -35,6 +43,10 @@ class InvestigadorController extends Controller
     public function store(Request $request)
     {
         //
+        $investigador = new Investigador($request->all());
+        $investigador->save();
+        flash('La investigador ' . $investigador->nombre . ' fue guardada de manera exitosa')->success();
+        return redirect()->route('admin.investigadors.index');
     }
 
     /**
@@ -57,6 +69,8 @@ class InvestigadorController extends Controller
     public function edit($id)
     {
         //
+        $investigador = Investigador::find($id);
+        return view('admin.investigador.edit')->with('investigador', $categoria);
     }
 
     /**
@@ -69,6 +83,12 @@ class InvestigadorController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $investigador = Investigador::find($id);
+        $investigador->nombre = $request->nombre;
+        $investigador->descripcion = $request->descripcion;
+        $investigador->save();
+        flash('la investigador ' . $investigador->nombre . ' fue modificada exitosamente')->warning();
+        return redirect()->route('admin.investigador.index');
     }
 
     /**
@@ -80,5 +100,9 @@ class InvestigadorController extends Controller
     public function destroy($id)
     {
         //
+        $investigador = Investigador::find($id);
+        $investigador->delete();
+        flash('la investigador ' . $investigador->nombre . ' fue eliminada de manera exitosa')->error();
+        return redirect()->route('admin.investigador.index');
     }
 }

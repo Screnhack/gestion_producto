@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('admin/index');
 });
+
+Route::resource('users','UsersController');
+
+Route::get('users/{id}/destroy',[
+		'uses' => 'UsersController@destroy',
+		'as'   => 'users.destroy'
+	]);
+Route::resource('articulos','UsersController');
+Route::resource('detalles','UsersController');
+Route::resource('investigador','UsersController');
