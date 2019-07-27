@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('admin/index');
+    return view('home');
 });
 
 //Route::resource('users','UsersController');
