@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('admin/index');
 });
 
-Route::resource('users','UsersController');
+//Route::resource('users','UsersController');
 
-Route::get('users/{id}/destroy',[
+/*Route::get('users/{id}/destroy',[
 		'uses' => 'UsersController@destroy',
 		'as'   => 'users.destroy'
-	]);
-Route::resource('articulos','UsersController');
-Route::resource('detalles','UsersController');
-Route::resource('investigador','UsersController');
+	]);*/
+Route::resource('articulos','ArticulosController');
+Route::resource('detalles','DetallesController');
+Route::resource('investigador','InvestigadorController');
