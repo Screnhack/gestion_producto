@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Articulo;
+use App\Detalle;
+use App\Investigador;
+use App\User;
+
 class ArticulosController extends Controller
 {
     /**

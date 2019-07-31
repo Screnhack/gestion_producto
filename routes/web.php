@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('admin/index');
+    return view('home');
 });
+
+//Route::resource('users','UsersController');
+
+/*Route::get('users/{id}/destroy',[
+		'uses' => 'UsersController@destroy',
+		'as'   => 'users.destroy'
+	]);*/
+Route::resource('articulos','ArticulosController');
+Route::resource('detalles','DetallesController');
+Route::resource('investigador','InvestigadorController');

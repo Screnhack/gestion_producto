@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+ use App\Articulo;
+use App\Detalle;
+use App\Investigador;
+use App\User;
 
 class DetallesController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
