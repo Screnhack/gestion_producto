@@ -1,29 +1,42 @@
 @extends('admin.template.main')
 @section('content')
-
-				<!-- Page Heading Start -->
-				<div class="page-heading">
+<div class="page-heading">
 					<h1><i class='fa fa-check'></i> Forms</h1>
 				</div>
 				<!-- Page Heading End-->
 
 				<!-- Your awesome content goes here -->
+
+
+
+
+
+
 				<div class="widget">
 					<div class="widget-header transparent">
-						<h2><strong>FORMULARIO ARTICULO</strong></h2>
+						<h2><strong>FORMULARIO CONSULTORIA</strong></h2>
 					</div>
 					<div class="widget-content padding">
 						<form class="form-horizontal" role="form">
 
 							<div class="row">
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Nombre :</label>
+									<label class="col-sm-4 control-label">Titulo :</label>
 									<div class="col-sm-8">
 										<input type="text" class="form-control " placeholder="">
 									</div>
 								</div>
+							</div>
+
+							<div class="row">
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">publicacion :</label>
+									<label class="col-sm-4 control-label">Empresa :</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" placeholder="">
+									</div>
+								</div>
+								<div class="form-group col-sm-6">
+									<label class="col-sm-4 control-label">Ciudad :</label>
 									<div class="col-sm-8">
 										<input type="text" class="form-control" placeholder="">
 									</div>
@@ -32,13 +45,13 @@
 
 							<div class="row">
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Año :</label>
+									<label class="col-sm-4 control-label">Fecha inicio :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
+										<input type="text" class="form-control " placeholder="">
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Numero :</label>
+									<label class="col-sm-4 control-label">Fecha fin :</label>
 									<div class="col-sm-8">
 										<input type="text" class="form-control" placeholder="">
 									</div>
@@ -47,63 +60,17 @@
 
 							<div class="row">
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Columna :</label>
+									<label class="col-sm-4 control-label">Tiempo :</label>
 									<div class="col-sm-8">
 										<input type="text" class="form-control " placeholder="">
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Paginas :</label>
-									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Issn :</label>
-									<div class="col-sm-8">
-										<input type="text" class="form-control " placeholder="">
-									</div>
-								</div>
-								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Isbn :</label>
-									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Pais :</label>
-									<div class="col-sm-8">
-										<input type="text" class="form-control " placeholder="">
-									</div>
-								</div>
-								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Fecha :</label>
-									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Editorial :</label>
-									<div class="col-sm-8">
-										<input type="text" class="form-control " placeholder="">
-									</div>
-								</div>
-								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Revista :</label>
+									<label class="col-sm-4 control-label">Restringido :</label>
 									<div class="col-sm-8">
 										<select class="form-control">
-											<option>R1</option>
-											<option>R2</option>
-											<option>R3</option>
+											<option>Si</option>
+											<option>No</option>
 										</select>
 									</div>
 								</div>
@@ -111,7 +78,7 @@
 
 							<div class="row">
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Categoria de revista :</label>
+									<label class="col-sm-4 control-label">Proyecto :</label>
 									<div class="col-sm-8">
 										<select class="form-control">
 											<option>c1</option>
@@ -121,38 +88,33 @@
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Tipologia del producto :</label>
+									<label class="col-sm-4 control-label">Contrato :</label>
 									<div class="col-sm-8">
-										<select class="form-control">
-											<option>c1</option>
-											<option>c2</option>
-											<option>c3</option>
-										</select>
+										<input type="text" class="form-control" placeholder="">
 									</div>
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Cuartil :</label>
+									<label class="col-sm-4 control-label">Certificado :</label>
 									<div class="col-sm-8">
-										<select class="form-control">
-											<option>TC</option>
-											<option>MT</option>
-											<option>Planta</option>
-										</select>
+										<input type="file" class="btn btn-default" title="Select file">
 									</div>
 								</div>
-
-								
-								
+								<div class="form-group col-sm-6">
+									<label class="col-sm-4 control-label">contrato :</label>
+									<div class="col-sm-8">
+										<input type="file" class="btn btn-default" title="Select file">
+									</div>
+								</div>
 							</div>
+
 
 
 							<div class="widget-header transparent">
 								<h2><strong>AUTORES</strong></h2>
 							</div>
-
 							<div class="row">
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Selecciones autores :</label>
@@ -166,21 +128,18 @@
 								</div>
 								<div class="form-group col-sm-6">
 									<button type="submit" class="btn btn-default">Agregar</button>
-
 								</div>
-								
 							</div>
 
-							<br><br><br><br><br><br><br><br><br><br>
 
-
-						</form>
 					</div>
 
-				</div>
-				<!-- End of your awesome content -->
-			
 
+					<br><br><br><br><br><br><br><br><br><br>
+
+
+					</form>
+				</div>
 @endsection
 @section('scripts')
 <script>

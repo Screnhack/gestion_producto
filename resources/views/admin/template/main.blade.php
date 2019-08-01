@@ -93,10 +93,8 @@
 <!-- Top Bar End -->
 		    <!-- Left Sidebar Start -->
         <div class="left side-menu">
-            
-               
-                
-                    @yield('dashboard')
+
+              @include('admin.template.dashboard')
                     
         </div>
         <!-- Left Sidebar End -->		    <!-- Right Sidebar Start -->
@@ -104,24 +102,12 @@
     <!-- Right Sidebar End -->		
 		<!-- Start right content -->
         <div class="content-page">
-			<!-- ============================================================== -->
+        	<!-- ============================================================== -->
 			<!-- Start Content here -->
 			<!-- ============================================================== -->
-            <div class="content">
-				<!-- Start info box -->
-				<div class="row top-summary">
-					
-				</div>
-				<!-- End of info box -->
-
-
-						   
-				
-            </div>
-			<!-- ============================================================== -->
-			<!-- End content here -->
-			<!-- ============================================================== -->
-
+			<div class="content">
+			@yield('content')
+			</div>
         </div>
 		<!-- End right content -->
 
@@ -137,6 +123,7 @@
 	<!-- End of page -->
 		<!-- the overlay modal element -->
 	<div class="md-overlay"></div>
+	@yield('scripts')
 	<!-- End of eoverlay modal -->
 	<script>
 		var resizefunc = [];
