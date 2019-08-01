@@ -12,14 +12,14 @@ class DetallesController extends Controller
 {
 
 
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return view("admin.detalles.index");
     }
 
     /**
@@ -29,7 +29,7 @@ class DetallesController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.detalles.create");
     }
 
     /**

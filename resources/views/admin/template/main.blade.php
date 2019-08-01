@@ -104,7 +104,22 @@
 			<!-- Start Content here -->
 			<!-- ============================================================== -->
 			<div class="content">
-			@yield('content')
+
+				<!-- Page Heading Start -->
+				<!--<div class="page-heading">
+					<h1><i class='fa fa-check'></i> Forms</h1>
+				</div>-->
+				<!-- Page Heading End-->
+
+				<!-- Your awesome content goes here -->
+				<div class="widget">
+					<div class="widget-header transparent">
+						<h2><strong>@yield('title')</strong></h2>
+					</div>
+					<div class="widget-content padding">
+						@yield('content')
+					</div>
+				</div>
 			</div>
         </div>
 		<!-- End right content -->

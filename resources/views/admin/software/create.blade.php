@@ -1,18 +1,8 @@
 @extends('admin.template.main')
+@section('title','FORMULARIO soft')
 @section('content')
-<div class="page-heading">
-					<h1><i class='fa fa-check'></i> Forms</h1>
-				</div>
-				<!-- Page Heading End-->
-
-				<!-- Your awesome content goes here -->
-				<div class="widget">
-					<div class="widget-header transparent">
-						<h2><strong>FORMULARIO soft</strong></h2>
-					</div>
-					<div class="widget-content padding">
 						<form class="form-horizontal" role="form">
-
+							<input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
 							<div class="row">
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Nombre :</label>
@@ -136,7 +126,6 @@
 
 
 					</form>
-				</div>
 @endsection
 @section('scripts')
 <script>

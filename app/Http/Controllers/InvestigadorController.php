@@ -10,17 +10,14 @@ use App\User;
 
 class InvestigadorController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
-        $investigador = Investigador::search($request->name)->orderBy('id', 'ASC')->paginate(15);
-        return view('admin.investigador.index')
-                        ->with('investigador', $investigador);
+        return view("admin.investigador.index");
     }
 
     /**
@@ -30,8 +27,7 @@ class InvestigadorController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.investigador.create');
+        return view("admin.investigador.create");
     }
 
     /**

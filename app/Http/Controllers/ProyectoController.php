@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 class ProyectoController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return view("admin.proyecto.index");
     }
 
     /**
@@ -23,7 +23,7 @@ class ProyectoController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.proyecto.create");
     }
 
     /**

@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 class ConsultoriaController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return view("admin.consultoria.index");
     }
 
     /**
@@ -23,7 +23,7 @@ class ConsultoriaController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.consultoria.create");
     }
 
     /**

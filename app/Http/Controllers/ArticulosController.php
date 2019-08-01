@@ -18,7 +18,7 @@ class ArticulosController extends Controller
      */
     public function index()
     {
-        return view("admin.articulos.create");
+        return view("admin.articulos.index");
     }
 
     /**
@@ -28,7 +28,7 @@ class ArticulosController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.articulos.create");
     }
 
     /**

@@ -28,7 +28,7 @@
             <li class='has_sub'><a href='javascript:void(0);'><i class='icon-home-3'></i><span>Proyectos</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                 <ul>
                     <li><a href="{{route('articulos.index')}}"><span>Registrar Proyecto</span></a></li>
-                    <li><a href="{{route('articulos.index')}}"><span>Editar Proyecto</span></a></li>
+                    <li><a href="{{route('articulos.create')}}"><span>Editar Proyecto</span></a></li>
                 </ul>
             </li>
 

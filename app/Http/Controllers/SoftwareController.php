@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 class SoftwareController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return view("admin.software.index");
     }
 
     /**
@@ -23,7 +23,7 @@ class SoftwareController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.software.create");
     }
 
     /**
