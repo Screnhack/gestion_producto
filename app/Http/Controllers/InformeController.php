@@ -4,12 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Articulo;
-use App\Detalle;
-use App\Investigador;
-use App\User;
-
-class ArticulosController extends Controller
+class InformeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +13,7 @@ class ArticulosController extends Controller
      */
     public function index()
     {
-        return view("admin.articulos.create");
+        //
     }
 
     /**

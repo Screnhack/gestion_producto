@@ -27,15 +27,15 @@
         <ul>
             <li class='has_sub'><a href='javascript:void(0);'><i class='icon-home-3'></i><span>Proyectos</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                 <ul>
-                    <li><a href='index.html'><span>Registrar Proyecto</span></a></li>
-                    <li><a href='index2.html'><span>Editar Proyecto</span></a></li>
+                    <li><a href="{{route('articulos.index')}}"><span>Registrar Proyecto</span></a></li>
+                    <li><a href="{{route('articulos.index')}}"><span>Editar Proyecto</span></a></li>
                 </ul>
             </li>
 
             <li class='has_sub'><a href='javascript:void(0);'><i class='icon-home-3'></i><span>Investigador</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                 <ul>
-                    <li><a href='index.html'><span>Registrar Investigador</span></a></li>
-                    <li><a href='index2.html'><span>Editar Investigador</span></a></li>
+                    <li><a href="{{route('articulos.index')}}"><span>Registrar Investigador</span></a></li>
+                    <li><a href="{{route('articulos.index')}}"><span>Editar Investigador</span></a></li>
                 </ul>
             </li>
 
@@ -43,29 +43,29 @@
                 <ul>
                     <li class='has_sub'><a href='javascript:void(0);'><span>Articulos</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                         <ul>
-                            <li><a href='javascript:void(0);'><i class='fa fa-camera'></i><span>Registrar Articulo</span></a></li>
-                            <li><a href='javascript:void(0);'><i class='fa fa-camera'></i><span>Editar Articulo</span></a></li>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Registrar Articulo</span></a></li>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Editar Articulo</span></a></li>
                         </ul>
                     </li>
 
                     <li class='has_sub'><a href='javascript:void(0);'><span>Software</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                         <ul>
-                            <li><a href='javascript:void(0);'><i class='fa fa-camera'></i><span>Registrar Software</span></a></li>
-                            <li><a href='javascript:void(0);'><i class='fa fa-camera'></i><span>Editar Software</span></a></li>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Registrar Software</span></a></li>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Editar Software</span></a></li>
                         </ul>
                     </li>
 
                     <li class='has_sub'><a href='javascript:void(0);'><span>Informe Tecnico</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                         <ul>
-                            <li><a href='javascript:void(0);'><i class='fa fa-camera'></i><span>Registrar Informe Tecnico</span></a></li>
-                            <li><a href='javascript:void(0);'><i class='fa fa-camera'></i><span>Editar Informe Tecnico</span></a></li>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Registrar Informe Tecnico</span></a></li>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Editar Informe Tecnico</span></a></li>
                         </ul>
                     </li>
 
                     <li class='has_sub'><a href='javascript:void(0);'><span>Consultoria</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                         <ul>
-                            <li><a href='javascript:void(0);'><i class='fa fa-camera'></i><span>Registrar Consultoria</span></a></li>
-                            <li><a href='javascript:void(0);'><i class='fa fa-camera'></i><span>Editar Consultoria</span></a></li>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Registrar Consultoria</span></a></li>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Editar Consultoria</span></a></li>
                         </ul>
                     </li>
                     

@@ -12,9 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('admin.articulos.create');
+    return view('index');
 });
 
+Route::get('/dashboard', function () {
+    return view('admin.index');
+});
 //Route::resource('users','UsersController');
 
 /*Route::get('users/{id}/destroy',[
@@ -22,5 +25,13 @@ Route::get('/', function () {
 		'as'   => 'users.destroy'
 	]);*/
 Route::resource('articulos','ArticulosController');
+Route::resource('consultoria','ConsultoriaController');
 Route::resource('detalles','DetallesController');
+Route::resource('informe','InformeController');
 Route::resource('investigador','InvestigadorController');
+Route::resource('proyecto','ProyectoController');
+Route::resource('software','SoftwareController');
+//Route::resource('usuarios','UsuariosController');
+
+
+

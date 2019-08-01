@@ -78,24 +78,22 @@
 	<!-- Begin page -->
 	<div id="wrapper">
 		
-<!-- Top Bar Start -->
-<div class="topbar">
-    <div class="topbar-left">
-        <div class="logo">
-            <h1><a href="#"><img src="{{asset('assets/img/logo.png')}}" alt="Logo"></a></h1>
-        </div>
-        <button class="button-menu-mobile open-left">
-        <i class="fa fa-bars"></i>
-        </button>
-    </div>
-    
-</div>
-<!-- Top Bar End -->
+			<!-- Top Bar Start -->
+			<div class="topbar">
+			    <div class="topbar-left">
+			        <div class="logo">
+			            <h1><a href="#"><img src="{{asset('assets/img/logo.png')}}" alt="Logo"></a></h1>
+			        </div>
+			        <button class="button-menu-mobile open-left">
+			        <i class="fa fa-bars"></i>
+			        </button>
+			    </div>
+			    
+			</div>
+			<!-- Top Bar End -->
 		    <!-- Left Sidebar Start -->
         <div class="left side-menu">
-
-              @include('admin.template.dashboard')
-                    
+              @include('admin.template.dashboard')           
         </div>
         <!-- Left Sidebar End -->		    <!-- Right Sidebar Start -->
     
@@ -174,6 +172,5 @@
 	<script src="{{ asset('assets/js/apps/notes.js')}}"></script>
 	<script src="{{ asset('assets/js/pages/index.js')}}"></script>
 	</body>
-
 <!-- Mirrored from hubancreative.com/projects/templates/coco/corporate/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Oct 2016 16:39:52 GMT -->
 </html>
