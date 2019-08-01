@@ -39,7 +39,11 @@ class ArticulosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
+        //$articulo = new Articulo($request->all());
+        //$articulo->save();
+        //flash('La categoria ' . $categoria->nombre . ' fue guardada de manera exitosa')->success();
+        return redirect()->route('admin.articulos.index');
     }
 
     /**

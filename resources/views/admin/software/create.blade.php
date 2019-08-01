@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 @section('title','FORMULARIO soft')
 @section('content')
-						<form class="form-horizontal" role="form">
+						<form class="form-horizontal" role="form" action="{{route('software.store')}}" method="POST" autocomplete="off">
 							<input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
 							<div class="row">
 								<div class="form-group col-sm-6">
