@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Informe;
+
 class InformeController extends Controller
 {
      /**
@@ -36,6 +38,9 @@ class InformeController extends Controller
     {
         //
         dd($request->all());
+        $informe = new Informe($request->all());
+        $informe->save();
+        return redirect()->route('admin.informe.index');
     }
 
     /**

@@ -7,13 +7,13 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Nombres :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control " placeholder="">
+										<input type="text" name="inve_nombre" class="form-control " placeholder="">
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Apellidos :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
+										<input type="text" name="inve_apellido" class="form-control" placeholder="">
 									</div>
 								</div>
 							</div>
@@ -22,7 +22,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Tipo de documento :</label>
 									<div class="col-sm-8">
-										<select class="form-control">
+										<select class="form-control" name="">
 											<option>Cedula</option>
 											<option>Pasaporte</option>
 											<option>Cedula extranjeria</option>
@@ -32,7 +32,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label"># documento :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
+										<input type="text" name="inve_documento" class="form-control" placeholder="">
 									</div>
 								</div>
 							</div>
@@ -41,13 +41,13 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Email :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control " placeholder="">
+										<input type="text" name="inve_email" class="form-control " placeholder="">
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Researchid :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
+										<input type="text" name="inve_researchid" class="form-control" placeholder="">
 									</div>
 								</div>
 							</div>
@@ -56,13 +56,13 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Orcid :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control " placeholder="">
+										<input type="text" name="inve_" class="form-control " placeholder="">
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Scopus :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
+										<input type="text" name="" class="form-control" placeholder="">
 									</div>
 								</div>
 							</div>
@@ -71,13 +71,13 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Google academico :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control " placeholder="">
+										<input type="text" name="" class="form-control " placeholder="">
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Researchid :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
+										<input type="text" name="" class="form-control" placeholder="">
 									</div>
 								</div>
 							</div>
@@ -86,13 +86,13 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Pais de afiliación :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control " placeholder="">
+										<input type="text" name="" class="form-control " placeholder="">
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label"># afiliación :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" placeholder="">
+										<input type="text" name="" class="form-control" placeholder="">
 									</div>
 								</div>
 							</div>
@@ -101,7 +101,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label"># horas de investigación :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control " placeholder="">
+										<input type="text" name="" class="form-control " placeholder="">
 									</div>
 								</div>
 							</div>
@@ -143,7 +143,7 @@
 										</div>
 										<div class="radio iradio">
 											<label>
-												<input type="radio" name="optionsRadios" id="optionD"
+												<input type="radio"  name="optionsRadios" id="optionD"
 													onclick="mostrarDependenciaPrograma(this.value)" value="D">
 												Una dependencia
 											</label>

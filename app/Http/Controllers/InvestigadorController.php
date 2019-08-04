@@ -38,11 +38,9 @@ class InvestigadorController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        //$investigador = new Investigador($request->all());
-        //$investigador->save();
-        //flash('La investigador ' . $investigador->nombre . ' fue guardada de manera exitosa')->success();
-        //return redirect()->route('admin.investigadors.index');
+        $investigador = new Investigador($request->all());
+        $investigador->save();
+        return redirect()->route('admin.investigador.index');
     }
 
     /**

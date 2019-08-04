@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Consultoria;
 
 class ConsultoriaController extends Controller
 {
@@ -35,7 +36,10 @@ class ConsultoriaController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request->all());
+        //dd($request->all());
+        $consultoria = new Consultoria($request->all());
+        $consultoria->save();
+        return redirect()->route('admin.consultoria.index');
     }
 
     /**

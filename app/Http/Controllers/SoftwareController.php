@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Software;
 
 class SoftwareController extends Controller
 {
@@ -35,7 +36,9 @@ class SoftwareController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request->all());
+        $software = new Software($request->all());
+        $software->save();
+        return redirect()->route('admin.software.index');
     }
 
     /**

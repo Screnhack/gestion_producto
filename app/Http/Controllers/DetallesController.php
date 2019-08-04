@@ -41,7 +41,11 @@ class DetallesController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request->all());
+        //dd($request->all());
+         $detalle = new Detalle($request->all());
+        $detalle->save();
+        //flash('La investigador ' . $investigador->nombre . ' fue guardada de manera exitosa')->success();
+        return redirect()->route('admin.detalles.index');
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Proyecto;
 
 class ProyectoController extends Controller
 {
@@ -35,7 +36,11 @@ class ProyectoController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request->all());
+        //dd($request->all());
+        $proyecto = new Proyecto($request->all());
+        $proyecto->save();
+        //flash('La investigador ' . $investigador->nombre . ' fue guardada de manera exitosa')->success();
+        return redirect()->route('admin.proyecto.index');
     }
 
     /**
