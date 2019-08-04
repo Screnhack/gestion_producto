@@ -1,0 +1,87 @@
+[33mcommit 157f109e0204d24d5ed7c9652d5d28e7b38bf669[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Andres Camilo Moreno Villamizar <camelo_38@hotmail.com>
+Date:   Sun Aug 4 16:11:20 2019 -0500
+
+    Arreglo de  registros
+
+[33mcommit e769fb548e3f81fedc16a69dda8c5b084fd7c75c[m
+Author: Andres Camilo Moreno Villamizar <camelo_38@hotmail.com>
+Date:   Wed Jul 31 21:26:39 2019 -0500
+
+    Agregado request para registar
+
+[33mcommit 33812b28f0f9cc3e5a4c83c72140acc2e0a8164f[m
+Author: Andres Camilo Moreno Villamizar <camelo_38@hotmail.com>
+Date:   Wed Jul 31 21:09:06 2019 -0500
+
+    Agregado de nuevos Modelo
+
+[33mcommit 0f385b03d5d949177bfae937fa1c9bf3efd9c9de[m
+Author: Andres Camilo Moreno Villamizar <camelo_38@hotmail.com>
+Date:   Wed Jul 31 19:57:04 2019 -0500
+
+    Se agregan las demas vistas y distribucion del proyecto
+
+[33mcommit 21f8cb7829d13b0bff0b24831bcf8e704dc38ea8[m
+Author: Andres Camilo Moreno Villamizar <camelo_38@hotmail.com>
+Date:   Wed Jul 31 19:21:02 2019 -0500
+
+    Se agregar los formularios de  creacion a las views
+
+[33mcommit 846622d93ef4ba09d84fda891c038522831b4613[m
+Merge: 17d3944 f6e4037
+Author: Screnhack <camelo_38@hotmail.com>
+Date:   Wed Jul 31 18:47:15 2019 -0500
+
+    Merge pull request #1 from jhonmarin26/master
+    
+    Formularios nuevos y modificacion del index
+
+[33mcommit f6e40377551ab0fe91ea4dd129c6c1237d34dad4[m
+Merge: 6507755 17d3944
+Author: JhonMarin <jhonmarin26@gmail.com>
+Date:   Tue Jul 30 20:03:11 2019 -0500
+
+    formularios y limpieza pag inicial
+
+[33mcommit 650775561555e4207ad768366a07e19ad4814b28[m
+Author: JhonMarin <jhonmarin26@gmail.com>
+Date:   Tue Jul 30 19:48:31 2019 -0500
+
+    formularios y limpieza pag inicial
+
+[33mcommit 17d39440d7ce6bf33f355e6eeb845c8e46d63202[m
+Author: andres moreno <andres.moreno@mbcolombia.com>
+Date:   Sat Jul 27 07:37:24 2019 -0500
+
+    Se agregaron  las vista login  y demas
+
+[33mcommit 58dec329a300a4daa6535b1c6a923ab6bd4c654b[m
+Author: andres moreno <andres.moreno@mbcolombia.com>
+Date:   Sat Jul 27 07:25:59 2019 -0500
+
+    Cambio de rutas
+
+[33mcommit b86558d67448907ce670e0335d9eea824de7cd7f[m
+Author: andres moreno <andres.moreno@mbcolombia.com>
+Date:   Sat Jul 27 07:23:36 2019 -0500
+
+    Se agregan rutas y cambios controladores y vistas
+
+[33mcommit cd13485f82a9944b99724b04eb8041a599145967[m
+Author: andres moreno <andres.moreno@mbcolombia.com>
+Date:   Thu Jul 25 22:04:05 2019 -0500
+
+    Arreglo de la vista
+
+[33mcommit 31fbd5ec99d1dd3fa36f3b4cec99020110d7111c[m
+Author: andres moreno <andres.moreno@mbcolombia.com>
+Date:   Thu Jul 25 21:37:18 2019 -0500
+
+    Se agregan controladores, modelos  y carpetas de vistas
+
+[33mcommit bace1a59d0391ff89e4a370a05c3352ba2c32981[m
+Author: andres moreno <andres.moreno@mbcolombia.com>
+Date:   Thu Jul 25 20:24:58 2019 -0500
+
+    Primer commit proyecto
