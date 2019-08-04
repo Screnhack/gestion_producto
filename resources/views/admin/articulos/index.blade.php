@@ -1,5 +1,6 @@
 @extends('admin.template.main')
 @section('content')
-
-Hola mundo
+<a href="{{route('articulos.create')}}">
+	<button type="button" class="btn btn-success btn-block">Registrar</button>
+</a>
 @endsection
