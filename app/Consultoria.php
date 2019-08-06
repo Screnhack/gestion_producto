@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Consultoria extends Model
 {
     //
-    protected $table = 'consultoria';
+    protected $table = 'producto_consultoria';
     /* campos que seran  traidos de la base de datos para generar la interaccion */
-    protected $fillable = ['cons_nombre','cons_publicacion','cons_anno','cons_numero','cons_columna','cons_paginas','cons_issn','cons_isbn','cons_pais','cons_fecha','cons_editorial','tipr_id','care_id','cuar_id'];
+    protected $fillable = ['prco_titulo','prco_empresa','prco_ciudad','prco_fechainicio','prco_fechafinal','prco_tiempo','prco_restingido','prco_contrato','prco_archivocertificado','prco_archivocontrato','proy_id','inve_id'];
 }

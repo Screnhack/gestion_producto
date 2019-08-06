@@ -14,7 +14,9 @@ class ProyectoController extends Controller
      */
     public function index()
     {
-        return view("admin.proyecto.index");
+        $proyectos = Proyecto::orderBy('proy_id', 'ASC')->get();
+        return view("admin.proyecto.index")->with('proyectos',$proyectos);
+
     }
 
     /**
@@ -40,7 +42,7 @@ class ProyectoController extends Controller
         $proyecto = new Proyecto($request->all());
         $proyecto->save();
         //flash('La investigador ' . $investigador->nombre . ' fue guardada de manera exitosa')->success();
-        return redirect()->route('admin.proyecto.index');
+        return redirect()->route('proyecto.index');
     }
 
     /**

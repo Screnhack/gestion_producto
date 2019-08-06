@@ -2,7 +2,7 @@
 @section('title','FORMULARIO ARTICULO')
 @section('content')
 						<form class="form-horizontal" role="form" action="{{route('articulos.store')}}" method="POST" autocomplete="off">
-							<input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
+							@csrf
 							<div class="row">
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Nombre :</label>
@@ -165,22 +165,5 @@
 @endsection
 @section('scripts')
 <script>
-		//var resizefunc = [];
-
-		$(document).ready(function () {
-			console.log("ready!");
-
-		});
-
-
-
-
-
-
-
-
-
-
-
-	</script>
+</script>
 @endsection

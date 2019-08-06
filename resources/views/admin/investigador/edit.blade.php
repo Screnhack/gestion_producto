@@ -22,7 +22,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Tipo de documento :</label>
 									<div class="col-sm-8">
-										<select class="form-control" name="">
+										<select class="form-control" name="tido_id">
 											<option>Cedula</option>
 											<option>Pasaporte</option>
 											<option>Cedula extranjeria</option>
@@ -45,6 +45,36 @@
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
+									<label class="col-sm-4 control-label">Researgate :</label>
+									<div class="col-sm-8">
+										<input type="text" name="inve_researchgate" class="form-control" placeholder="">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group col-sm-6">
+									<label class="col-sm-4 control-label">Orcid :</label>
+									<div class="col-sm-8">
+										<input type="text" name="inve_orcid" class="form-control " placeholder="">
+									</div>
+								</div>
+								<div class="form-group col-sm-6">
+									<label class="col-sm-4 control-label">Scopus :</label>
+									<div class="col-sm-8">
+										<input type="text" name="inve_scopus" class="form-control" placeholder="">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group col-sm-6">
+									<label class="col-sm-4 control-label">Google academico :</label>
+									<div class="col-sm-8">
+										<input type="text" name="inve_googleacademico" class="form-control " placeholder="">
+									</div>
+								</div>
+								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Researchid :</label>
 									<div class="col-sm-8">
 										<input type="text" name="inve_researchid" class="form-control" placeholder="">
@@ -54,45 +84,15 @@
 
 							<div class="row">
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Orcid :</label>
-									<div class="col-sm-8">
-										<input type="text" name="inve_" class="form-control " placeholder="">
-									</div>
-								</div>
-								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Scopus :</label>
-									<div class="col-sm-8">
-										<input type="text" name="" class="form-control" placeholder="">
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Google academico :</label>
-									<div class="col-sm-8">
-										<input type="text" name="" class="form-control " placeholder="">
-									</div>
-								</div>
-								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Researchid :</label>
-									<div class="col-sm-8">
-										<input type="text" name="" class="form-control" placeholder="">
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Pais de afiliación :</label>
 									<div class="col-sm-8">
-										<input type="text" name="" class="form-control " placeholder="">
+										<input type="text" name="inve_paisafiliacion" class="form-control " placeholder="">
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label"># afiliación :</label>
 									<div class="col-sm-8">
-										<input type="text" name="" class="form-control" placeholder="">
+										<input type="text" name="inve_numeroafiliacion" class="form-control" placeholder="">
 									</div>
 								</div>
 							</div>
@@ -101,7 +101,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label"># horas de investigación :</label>
 									<div class="col-sm-8">
-										<input type="text" name="" class="form-control " placeholder="">
+										<input type="text" name="inve_horasinvestigacion" class="form-control " placeholder="">
 									</div>
 								</div>
 							</div>
@@ -110,7 +110,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Carga horaria :</label>
 									<div class="col-sm-8">
-										<select class="form-control">
+										<select class="form-control" name="caho_id">
 											<option>TC</option>
 											<option>MT</option>
 											<option>Planta</option>
@@ -120,7 +120,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Categoria colciencias :</label>
 									<div class="col-sm-8">
-										<select class="form-control">
+										<select class="form-control" name="caco_id">
 											<option>Categ 1</option>
 											<option>Categ 2</option>
 											<option>Categ 3</option>
@@ -156,7 +156,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Dependencia :</label>
 									<div class="col-sm-8">
-										<select class="form-control">
+										<select class="form-control" name="depe_id">
 											<option>Administrativa</option>
 											<option>Investigacion</option>
 											<option>Otra</option>
@@ -169,7 +169,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Programa academico :</label>
 									<div class="col-sm-8">
-										<select class="form-control">
+										<select class="form-control" name="prog_id">
 											<option>Ingenieria</option>
 											<option>Derecho</option>
 											<option>Psicologia</option>
@@ -179,7 +179,7 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Categoria profesor :</label>
 									<div class="col-sm-8">
-										<select class="form-control">
+										<select class="form-control" name="capr_id">
 											<option>Categ 1</option>
 											<option>Categ 2</option>
 											<option>Categ 3</option>

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Informe extends Model
 {
     //
-    protected $table = 'informe';
+    protected $table = 'producto_informe_tecnico';
     /* campos que seran  traidos de la base de datos para generar la interaccion */
-    protected $fillable = ['prar_nombre','prar_publicacion','prar_anno','prar_numero','prar_columna','prar_paginas','prar_issn','prar_isbn','prar_pais','prar_fecha','prar_editorial','tipr_id','care_id','cuar_id'];
+    protected $fillable = ['prit_titulo','prit_empresa','prit_ciudad','prit_fechainicio','prit_fechafinal','prit_tiempo','prit_restingido','prit_contrato','prit_archivocertificado','proy_id','inve_id'];
 }
