@@ -31,6 +31,16 @@ Route::resource('informe','InformeController');
 Route::resource('investigador','InvestigadorController');
 Route::resource('proyecto','ProyectoController');
 Route::resource('software','SoftwareController');
+Route::resource('calidad_revista','CalidadRevistaController');
+Route::resource('carga_horaria','CargaHorariaController');
+Route::resource('categoria_colciencias','CategoriaColcienciaController');
+Route::resource('categoria_profesor','CategoriaProfesorController');
+Route::resource('cuartil','CuartilController');
+Route::resource('dependencias','DependenciaController');
+Route::resource('programas','ProgramaController');
+Route::resource('revistas','RevistaController');
+Route::resource('tipologia_producto','TipologiaProductoController');
+
 //Route::resource('usuarios','UsuariosController');
 
 
