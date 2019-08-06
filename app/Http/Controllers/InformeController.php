@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Informe;
+use App\Proyecto;
 
 class InformeController extends Controller
 {
@@ -25,7 +26,9 @@ class InformeController extends Controller
      */
     public function create()
     {
-        return view("admin.informe.create");
+
+        $proyectos = Proyecto::orderBy('proy_id', 'ASC')->get();
+        return view("admin.informe.create")->with('proyectos',$proyectos);
     }
 
     /**

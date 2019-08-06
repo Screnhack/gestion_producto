@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Articulo;
 use App\Detalle;
 use App\Investigador;
@@ -27,7 +28,19 @@ class InvestigadorController extends Controller
      */
     public function create()
     {
-        return view("admin.investigador.create");
+        $cargas_horarias = DB::table('carga_horaria')->get();
+        $categorias_colciencias = DB::table('categoria_colciencias')->get();
+        $programas = DB::table('programas')->get();
+        $dependencias = DB::table('dependencias')->get();
+        $categorias_profesores = DB::table('categoria_profesor')->get();
+        $grupos_investigacion = DB::table('grupo_investigacion')->get();
+        return view("admin.investigador.create")
+        ->with('cargas_horarias',$cargas_horarias)
+        ->with('categorias_colciencias',$categorias_colciencias)
+        ->with('programas',$programas)
+        ->with('dependencias',$dependencias)
+        ->with('categorias_profesores',$categorias_profesores)
+        ->with('grupos_investigacion',$grupos_investigacion);
     }
 
     /**

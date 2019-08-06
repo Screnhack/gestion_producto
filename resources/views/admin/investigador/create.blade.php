@@ -111,19 +111,19 @@
 									<label class="col-sm-4 control-label">Carga horaria :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="caho_id">
-											<option value="">TC</option>
-											<option value="">MT</option>
-											<option value="">Planta</option>
+											@foreach($cargas_horarias as $carga)
+												<option value="{{$carga->caho_id}}">{{$carga->caho_descripcion}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Categoria colciencias :</label>
+									<label class="col-sm-4 control-label">Categoria colciencias:</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="caco_id">
-											<option>Categ 1</option>
-											<option>Categ 2</option>
-											<option>Categ 3</option>
+											@foreach($categorias_colciencias as $categoria)
+												<option value="{{$categoria->caco_id}}">{{$categoria->caco_descripcion}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>

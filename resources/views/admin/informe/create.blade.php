@@ -1,5 +1,5 @@
 @extends('admin.template.main')
-@section('title','FORMULARIO INFORME')
+@section('title','FORMULARIO INFORME TECNICO')
 @section('content')
 						<form class="form-horizontal" role="form" action="{{route('informe.store')}}" method="POST" autocomplete="off">
 							@csrf
@@ -31,13 +31,13 @@
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Fecha inicio :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control " name="prit_fechainicio" placeholder="">
+										<input type="date" class="form-control " name="prit_fechainicio" placeholder="">
 									</div>
 								</div>
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Fecha fin :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" name="prit_fechafinal" placeholder="">
+										<input type="date" class="form-control" name="prit_fechafinal" placeholder="">
 									</div>
 								</div>
 							</div>
@@ -65,9 +65,9 @@
 									<label class="col-sm-4 control-label">Proyecto :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="proy_id">
-											<option>c1</option>
-											<option>c2</option>
-											<option>c3</option>
+											@foreach($proyectos as $proyecto)
+											<option value="{{$proyecto->proy_id}} ">{{$proyecto->proy_nombre}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>
@@ -98,9 +98,6 @@
 									<label class="col-sm-4 control-label">Selecciones autores :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="inve_id">
-											<option>TC</option>
-											<option>MT</option>
-											<option>Planta</option>
 										</select>
 									</div>
 								</div>
