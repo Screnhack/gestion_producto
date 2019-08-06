@@ -72,6 +72,83 @@
                 </ul>
             </li>
 
+            <li class='has_sub'><a href='javascript:void(0);'><i class='icon-megaphone'></i><span>configuración</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                <ul>
+                    <li class='has_sub'><a href='javascript:void(0);'><span>Calidad Revista</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Listar Calidad Revista</span></a></li>
+                            <li><a href="{{route('articulos.create')}}"><i class='fa fa-camera'></i><span>Registrar Calidad Revista</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='has_sub'><a href='javascript:void(0);'><span>Carga Horaria</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Listar Carga Horaria</span></a></li>
+                            <li><a href="{{route('articulos.create')}}"><i class='fa fa-camera'></i><span>Registrar Carga Horaria</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='has_sub'><a href='javascript:void(0);'><span>Categorias Colciencias </span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Listar Categorias Colciencias</span></a></li>
+                            <li><a href="{{route('articulos.create')}}"><i class='fa fa-camera'></i><span>Registrar Categorias Colciencias</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='has_sub'><a href='javascript:void(0);'><span>Categorias Profesor </span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Listar Categorias Profesor</span></a></li>
+                            <li><a href="{{route('articulos.create')}}"><i class='fa fa-camera'></i><span>Registrar Categorias Profesor</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='has_sub'><a href='javascript:void(0);'><span>Cuartil </span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Listar Cuartil</span></a></li>
+                            <li><a href="{{route('articulos.create')}}"><i class='fa fa-camera'></i><span>Registrar Cuartil</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='has_sub'><a href='javascript:void(0);'><span>Dependencias </span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Listar Dependencias</span></a></li>
+                            <li><a href="{{route('articulos.create')}}"><i class='fa fa-camera'></i><span>Registrar Dependencias</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='has_sub'><a href='javascript:void(0);'><span>Programas </span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Listar Programas</span></a></li>
+                            <li><a href="{{route('articulos.create')}}"><i class='fa fa-camera'></i><span>Registrar Programas</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='has_sub'><a href='javascript:void(0);'><span>Revistas </span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Listar Revistas</span></a></li>
+                            <li><a href="{{route('articulos.create')}}"><i class='fa fa-camera'></i><span>Registrar Revistas</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='has_sub'><a href='javascript:void(0);'><span>Tipologia Productos </span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{{route('articulos.index')}}"><i class='fa fa-camera'></i><span>Listar Tipologia Productos</span></a></li>
+                            <li><a href="{{route('articulos.create')}}"><i class='fa fa-camera'></i><span>Registrar Tipologia Productos</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+
+
         </ul>
 
         <div class="clearfix"></div>
