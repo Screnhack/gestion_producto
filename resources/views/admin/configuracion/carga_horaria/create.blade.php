@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 @section('title','FORMULARIO CARGA HORARIA')
 @section('content')
-							<form class="form-horizontal" role="form" action="{{route('consultoria.store')}}" method="POST" autocomplete="off">
+							<form class="form-horizontal" role="form" action="{{route('carga_horaria.store')}}" method="POST" autocomplete="off">
 							@csrf
 							<div class="row">
 								<div class="form-group col-sm-6">

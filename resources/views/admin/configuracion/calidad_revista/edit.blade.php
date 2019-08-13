@@ -12,7 +12,7 @@
 									</div>
                                 </div>
                                 <div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Código :</label>
+									<label class="col-sm-4 control-label">Código:</label>
 									<div class="col-sm-8">
 										<input type="text" class="form-control" name="care_codigo" placeholder="" maxlength="2">
 									</div>

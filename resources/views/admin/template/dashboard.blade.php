@@ -72,7 +72,7 @@
                 </ul>
             </li>
 
-            <li class='has_sub'><a href='javascript:void(0);'><i class='icon-megaphone'></i><span>configuración</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+            <li class='has_sub'><a href='javascript:void(0);'><i class='icon-megaphone'></i><span>Configuración</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                 <ul>
                     <li class='has_sub'><a href='javascript:void(0);'><span>Calidad Revista</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                         <ul>

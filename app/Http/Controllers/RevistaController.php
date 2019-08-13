@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Revista;
 
 class RevistaController extends Controller
 {
@@ -13,8 +14,8 @@ class RevistaController extends Controller
      */
     public function index()
     {
-        
-        return view("admin.configuracion.revistas.index");
+        $revistas = Revista::orderBy('revi_id', 'ASC')->get();
+        return view("admin.configuracion.revistas.index")->with('revistas',$revistas);
     }
 
     /**
@@ -25,5 +26,63 @@ class RevistaController extends Controller
     public function create()
     {
         return view("admin.configuracion.revistas.create");
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $revista = new Revista($request->all());
+        $revista->save();
+        return redirect()->route('revistas.index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }
