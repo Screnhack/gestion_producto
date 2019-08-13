@@ -63,7 +63,8 @@ class CalidadRevistaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $calidad_revista = CalidadRevista::where('care_id', $id)->first();
+        return view('admin.configuracion.calidad_revista.edit')->with('calidad_revista', $calidad_revista);
     }
 
     /**
@@ -75,7 +76,9 @@ class CalidadRevistaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $calidad_revista = CalidadRevista::find($id);
+        $calidad_revista->save();
+        return redirect()->route('calidad_revista.index');
     }
 
     /**

@@ -60,7 +60,8 @@ class TipologiaProductoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tipologiaProducto = TipologiaProducto::find($id);
+        return view('admin.configuracion.tipologia_producto.create')->with('tipologiaProducto', $tipologiaProducto);
     }
 
     /**
@@ -72,7 +73,9 @@ class TipologiaProductoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tipologiaProducto = TipologiaProducto::find($id);
+        $tipologiaProducto->save();
+        return redirect()->route('tipologia_producto.index');
     }
 
     /**

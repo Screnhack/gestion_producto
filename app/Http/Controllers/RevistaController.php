@@ -53,14 +53,15 @@ class RevistaController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $revista = Revista::find($id);
+        return view('admin.configuracion.revistas.create')->with('revista', $revista);
     }
 
     /**
@@ -72,7 +73,9 @@ class RevistaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $revista = Revista::find($id);
+        $revista->save();
+        return redirect()->route('revistas.index');
     }
 
     /**

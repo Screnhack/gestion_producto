@@ -61,7 +61,8 @@ class CuartilController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cuartil = Cuartil::find($id);
+        return view('admin.configuracion.cuartil.create')->with('cuartil', $cuartil);
     }
 
     /**
@@ -73,7 +74,9 @@ class CuartilController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cuartil = Cuartil::find($id);
+        $cuartil->save();
+        return redirect()->route('cuartil.index');
     }
 
     /**

@@ -53,14 +53,15 @@ class ProgramaController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $programa = Programa::find($id);
+        return view('admin.configuracion.programas.create')->with('programa', $programa);
     }
 
     /**
@@ -72,7 +73,9 @@ class ProgramaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $programa = Programa::find($id);
+        $programa->save();
+        return redirect()->route('programas.index');
     }
 
     /**

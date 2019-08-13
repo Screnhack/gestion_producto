@@ -61,7 +61,8 @@ class CategoriaColcienciaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categoriaColciencia = CategoriaColciencia::find($id);
+        return view('admin.configuracion.categoria_colciencias.create')->with('categoriaColciencia', $categoriaColciencia);
     }
 
     /**
@@ -73,7 +74,9 @@ class CategoriaColcienciaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $categoriaColciencia = CategoriaColciencia::find($id);
+        $categoriaColciencia->save();
+        return redirect()->route('categoria_colciencias.index');
     }
 
     /**

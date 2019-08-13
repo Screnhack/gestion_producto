@@ -62,7 +62,8 @@ class CargaHorariaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $carga_horaria = CargaHoraria::where('caho_id',$id);
+        return view('admin.configuracion.carga_horaria.create')->with('carga_horaria', $carga_horaria);
     }
 
     /**
@@ -74,7 +75,9 @@ class CargaHorariaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $carga_horaria = CargaHoraria::find($id);
+        $carga_horaria->save();
+        return redirect()->route('carga_horaria.index');
     }
 
     /**

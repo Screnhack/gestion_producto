@@ -61,7 +61,8 @@ class CategoriaProfesorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categoriaProfesor = CategoriaProfesor::find($id);
+        return view('admin.configuracion.categoria_profesor.create')->with('categoriaProfesor', $categoriaProfesor);
     }
 
     /**
@@ -73,7 +74,9 @@ class CategoriaProfesorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $categoriaProfesor = CategoriaProfesor::find($id);
+        $categoriaProfesor->save();
+        return redirect()->route('categoria_profesor.index');
     }
 
     /**
