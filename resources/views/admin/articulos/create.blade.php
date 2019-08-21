@@ -89,9 +89,9 @@
 									<label class="col-sm-4 control-label">Revista :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="tipr_id">
-											<option>R1</option>
-											<option>R2</option>
-											<option>R3</option>
+											@foreach($revistas as $revista)
+												<option value="{{$revista->reve_id}}">{{$revista->reve_descripcion}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>
@@ -102,9 +102,9 @@
 									<label class="col-sm-4 control-label">Categoria de revista :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="care_id">
-											<option>c1</option>
-											<option>c2</option>
-											<option>c3</option>
+											@foreach($calidadRevistas as $calidadRevista)
+												<option value="{{$calidadRevista->care_id}}">{{$calidadRevista->care_descripcion}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>
@@ -112,9 +112,9 @@
 									<label class="col-sm-4 control-label">Tipologia del producto :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="tipr_id">
-											<option>c1</option>
-											<option>c2</option>
-											<option>c3</option>
+											@foreach($tipologias_productos as $tipologia_producto)
+												<option value="{{$tipologia_producto->tipr_id}}">{{$tipologia_producto->tipr_descripcion}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>
@@ -125,9 +125,9 @@
 									<label class="col-sm-4 control-label">Cuartil :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="cuar_id">
-											<option>TC</option>
-											<option>MT</option>
-											<option>Planta</option>
+											@foreach($cuartiles as $cuartil)
+												<option value="{{$cuartil->cuar_id}}">{{$cuartil->cuar_descripcion}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>

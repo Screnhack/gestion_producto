@@ -65,7 +65,7 @@
                     <li class='has_sub'><a href='javascript:void(0);'><span>Consultoria</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                         <ul>
                             <li><a href="{{route('consultoria.index')}}"><i class='fa fa-camera'></i><span>Listar Consultoria</span></a></li>
-                            <li><a href="{{route('consultoria.index')}}"><i class='fa fa-camera'></i><span>Registrar Consultoria</span></a></li>
+                            <li><a href="{{route('consultoria.create')}}"><i class='fa fa-camera'></i><span>Registrar Consultoria</span></a></li>
                         </ul>
                     </li>
                     

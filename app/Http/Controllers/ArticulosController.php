@@ -8,6 +8,10 @@ use App\Articulo;
 use App\Detalle;
 use App\Investigador;
 use App\User;
+use App\Cuartil;
+use App\TipologiaProducto;
+use App\CalidadRevista;
+use App\Revista;
 
 class ArticulosController extends Controller
 {
@@ -28,8 +32,16 @@ class ArticulosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view("admin.articulos.create");
+    {   
+        $calidadRevistas = CalidadRevista::orderBy('care_id', 'ASC')->get();
+        $revistas = Revista::orderBy('revi_id', 'ASC')->get();
+        $cuartiles = Cuartil::orderBy('cuar_id', 'ASC')->get();
+        $tipologias_productos = TipologiaProducto::orderBy('tipr_id', 'ASC')->get();
+        return view("admin.articulos.create")
+        ->with('calidadRevistas',$calidadRevistas)
+        ->with('revistas',$revistas)
+        ->with('cuartiles',$cuartiles)
+        ->with('tipologias_productos',$tipologias_productos);
     }
 
     /**
@@ -43,7 +55,6 @@ class ArticulosController extends Controller
         //dd($request->all());
         $articulo = new Articulo($request->all());
         $articulo->save();
-        //flash('La categoria ' . $categoria->nombre . ' fue guardada de manera exitosa')->success();
         return redirect()->route('admin.articulos.index');
     }
 

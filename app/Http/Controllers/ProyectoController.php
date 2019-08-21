@@ -25,8 +25,9 @@ class ProyectoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view("admin.proyecto.create");
+    {   
+        $investigadores = Investigador::orderBy('inve_id', 'ASC')->get();
+        return view("admin.proyecto.create")->with('investigadores',$investigadores);
     }
 
     /**
@@ -41,7 +42,6 @@ class ProyectoController extends Controller
         //dd($request->all());
         $proyecto = new Proyecto($request->all());
         $proyecto->save();
-        //flash('La investigador ' . $investigador->nombre . ' fue guardada de manera exitosa')->success();
         return redirect()->route('proyecto.index');
     }
 

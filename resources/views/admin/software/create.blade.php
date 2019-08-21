@@ -67,9 +67,9 @@
 									<label class="col-sm-4 control-label">Proyecto :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="proy_id">
-											<option>c1</option>
-											<option>c2</option>
-											<option>c3</option>
+										@foreach($proyectos as $proyecto)
+												<option value="{{$proyecto->proy_id}}">{{$proyecto->proy_nombre}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>

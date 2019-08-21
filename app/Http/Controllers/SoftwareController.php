@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Software;
+use App\Proyecto;
 
 class SoftwareController extends Controller
 {
@@ -24,7 +25,10 @@ class SoftwareController extends Controller
      */
     public function create()
     {
-        return view("admin.software.create");
+        $proyectos = Proyecto::orderBy('proy_id', 'ASC')->get();
+        return view("admin.software.create")
+        ->with('proyectos',$proyectos);
+        
     }
 
     /**

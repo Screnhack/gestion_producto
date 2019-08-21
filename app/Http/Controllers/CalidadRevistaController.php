@@ -14,7 +14,7 @@ class CalidadRevistaController extends Controller
      */
     public function index()
     {
-        $calidadRevista = calidadRevista::orderBy('care_id', 'ASC')->get();        
+        $calidadRevista = CalidadRevista::orderBy('care_id', 'ASC')->get();        
         return view("admin.configuracion.calidad_revista.index")
         ->with('calidadRevista',$calidadRevista);
     }

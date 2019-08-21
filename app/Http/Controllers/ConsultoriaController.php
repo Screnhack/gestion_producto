@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Consultoria;
+use App\Proyecto;
 
 class ConsultoriaController extends Controller
 {
@@ -24,7 +25,10 @@ class ConsultoriaController extends Controller
      */
     public function create()
     {
-        return view("admin.consultoria.create");
+        $proyectos = Proyecto::orderBy('proy_id', 'ASC')->get();
+        return view("admin.consultoria.create")
+        ->with('proyectos',$proyectos);
+       
     }
 
     /**
