@@ -128,8 +128,6 @@
 									</div>
 								</div>
 							</div>
-
-
 							<div class="row">
 								<div class="form-group">
 									<label class="col-sm-2 control-label">Pertenece a :</label>
@@ -152,27 +150,27 @@
 								</div>
 							</div>
 
-							<div class="row" id="rowDependencia" hidden>
+							<div class="row" id="rowDependencia">
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Dependencia :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="depe_id">
-											<option>Administrativa</option>
-											<option>Investigacion</option>
-											<option>Otra</option>
+											@foreach($dependencias as $dependencia)
+												<option value="{{$dependencia->depe_id}}">{{$dependencia->depe_descripcion}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>
 							</div>
 
-							<div class="row" id="rowPrograma" hidden>
+							<div class="row" id="rowPrograma">
 								<div class="form-group col-sm-6">
-									<label class="col-sm-4 control-label">Programa academico :</label>
+									<label class="col-sm-4 control-label">Programa academico:</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="prog_id">
-											<option>Ingenieria</option>
-											<option>Derecho</option>
-											<option>Psicologia</option>
+											@foreach($programas as $programa)
+												<option value="{{$programa->prog_id}}">{{$programa->prog_descripcion}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>
@@ -180,9 +178,9 @@
 									<label class="col-sm-4 control-label">Categoria profesor :</label>
 									<div class="col-sm-8">
 										<select class="form-control" name="capr_id">
-											<option>Categ 1</option>
-											<option>Categ 2</option>
-											<option>Categ 3</option>
+											@foreach($categorias_profesores as $categoria_profesor)
+												<option value="{{$categoria_profesor->capr_id}}">{{$categoria_profesor->capr_descripcion}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>
@@ -196,22 +194,22 @@
 @section('scripts')
 <script>
 		// funcion show dependencia o programas
-		function mostrarDependenciaPrograma(val) {
-			console.log("entro " + val);
-			switch (val) {
-				case "D":
-					// mostrar dependencia y ocultar programas
-					$("#rowDependencia").show();
-					$("#rowPrograma").hide();
-					return;
+		// function mostrarDependenciaPrograma(val) {
+		// 	console.log("entro " + val);
+		// 	switch (val) {
+		// 		case "D":
+		// 			// mostrar dependencia y ocultar programas
+		// 			$("#rowDependencia").show();
+		// 			$("#rowPrograma").hide();
+		// 			return;
 
-				case "P":
-					// mostrar dependencia y ocultar programas
-					$("#rowDependencia").hide();
-					$("#rowPrograma").show();
-					return;
-			}
+		// 		case "P":
+		// 			// mostrar dependencia y ocultar programas
+		// 			$("#rowDependencia").hide();
+		// 			$("#rowPrograma").show();
+		// 			return;
+		// 	}
 
-		}
+		// }
 	</script>
 @endsection

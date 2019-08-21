@@ -60,8 +60,8 @@ class ProgramaController extends Controller
      */
     public function edit($id)
     {
-        $programa = Programa::find($id);
-        return view('admin.configuracion.programas.create')->with('programa', $programa);
+        $programa = Programa::where('prog_id',$id)->first();
+        return view('admin.configuracion.programas.edit')->with('programa', $programa);
     }
 
     /**
@@ -73,7 +73,7 @@ class ProgramaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $programa = Programa::find($id);
+        $programa = Programa::where('prog_id',$id)->first();
         $programa->save();
         return redirect()->route('programas.index');
     }

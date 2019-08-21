@@ -49,8 +49,8 @@ class DependenciaController extends Controller
      */
     public function edit($id)
     {
-        $dependencia = Dependencia::find($id);
-        return view('admin.configuracion.dependencias.create')->with('dependencia', $dependencia);
+        $dependencia = Dependencia::where('depe_id', $id)->first();
+        return view('admin.configuracion.dependencias.edit')->with('dependencia', $dependencia);
     }
 
     /**
@@ -62,21 +62,9 @@ class DependenciaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $dependencia = Dependencia::find($id);
+        $dependencia = Dependencia::where('depe_id', $id)->first();
         $dependencia->save();
         return redirect()->route('dependencias.index');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**

@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 @section('title','FORMULARIO INVESTIGADOR')
 @section('content')
-						<form class="form-horizontal" role="form" action="{{route('investigador.store')}}" method="POST" autocomplete="off">
+{!! Form::open(['route'=>['investigador.update',$investigador->inve_id],'method'=> 'PUT']) !!}
 							<input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
 							<div class="row">
 								<div class="form-group col-sm-6">
@@ -188,7 +188,7 @@
 								</div>
 							</div>
 							<br><br><br><br><br><br><br><br><br><br>
-						</form>
+							{!! Form::close() !!}
 @endsection
 @section('scripts')
 <script>

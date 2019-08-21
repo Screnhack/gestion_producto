@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 @section('title','FORMULARIO ARTICULO')
 @section('content')
-						<form class="form-horizontal" role="form" action="{{route('articulos.store')}}" method="POST" autocomplete="off">
+{!! Form::open(['route'=>['articulos.update',$articulo->arti_id],'method'=> 'PUT']) !!}
 							<input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
 							<div class="row">
 								<div class="form-group col-sm-6">
@@ -157,11 +157,7 @@
 								</div>
 								
 							</div>
-						</form>
-
-				<!-- End of your awesome content -->
-			
-
+							{!! Form::close() !!}
 @endsection
 @section('scripts')
 <script>

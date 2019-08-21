@@ -18,7 +18,8 @@ class InvestigadorController extends Controller
      */
     public function index()
     {
-        return view("admin.investigador.index");
+        $investigadores = Investigador::orderBy('inve_id', 'ASC')->get(); 
+        return view("admin.investigador.index")->with('investigadores',$investigadores);
     }
 
     /**
@@ -53,7 +54,7 @@ class InvestigadorController extends Controller
     {
         $investigador = new Investigador($request->all());
         $investigador->save();
-        return redirect()->route('admin.investigador.index');
+        return redirect()->route('investigador.index');
     }
 
     /**

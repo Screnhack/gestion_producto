@@ -1,6 +1,7 @@
 @extends('admin.template.main')
 @section('title','FORMULARIO CONSULTORIA')
 @section('content')
+{!! Form::open(['route'=>['consultoria.update',$consultoria->cons_id],'method'=> 'PUT']) !!}
 							<form class="form-horizontal" role="form" action="{{route('consultoria.store')}}" method="POST" autocomplete="off">
 							<input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
 							<div class="row">
@@ -116,7 +117,7 @@
 							</div>
 
 					</div>
-					</form>
+					{!! Form::close() !!}
 @endsection
 @section('scripts')
 <script>

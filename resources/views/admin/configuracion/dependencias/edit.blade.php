@@ -1,20 +1,18 @@
 @extends('admin.template.main')
 @section('title','FORMULARIO DEPENDENCIAS')
 @section('content')
-							<form class="form-horizontal" role="form" action="{{route('consultoria.store')}}" method="POST" autocomplete="off">
-                            <input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
-
+{!! Form::open(['route'=>['dependencias.update',$dependencia->depe_id],'method'=> 'PUT']) !!}
                             <div class="row">
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Descripción :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" name="depe_descripcion" placeholder="" maxlength="20">
+										<input type="text" class="form-control" name="depe_descripcion" placeholder="" value="{{$dependencia->depe_descripcion}}" maxlength="20">
 									</div>
                                 </div>
                                 <div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Código :</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" name="depe_codigo" placeholder="" maxlength="2">
+										<input type="text" class="form-control" name="depe_codigo" placeholder="" value="{{$dependencia->depe_codigo}}" maxlength="2">
 									</div>
 								</div>
 								
@@ -38,7 +36,7 @@
                             </div>
 
 					</div>
-					</form>
+					{!! Form::close() !!}
 @endsection
 @section('scripts')
 <script>

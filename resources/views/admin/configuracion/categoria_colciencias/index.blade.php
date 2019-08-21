@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 @section('title','Categoria')
 @section('content')
-<a href="{{route('categoria_colciencias.create') Colciencias}}">
+<a href="{{route('categoria_colciencias.create')}}">
 	<button type="button" class="btn btn-success btn-block">Registrar</button>
 </a>
 <table>

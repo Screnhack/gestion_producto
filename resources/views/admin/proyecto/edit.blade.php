@@ -1,8 +1,8 @@
 @extends('admin.template.main')
 @section('title','FORMULARIO PROYECTO')
 @section('content')
-						<form class="form-horizontal" role="form" action="{{route('proyecto.store')}}" method="POST" autocomplete="off">
-							<input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
+							
+							{!! Form::open(['route'=>['proyecto.update',$proyecto->proy_id],'method'=> 'PUT']) !!}
 							<div class="row">
 								<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Nombre del proyecto :</label>
@@ -61,7 +61,7 @@
 					<br><br><br><br><br><br><br><br><br><br>
 
 
-					</form>
+					{!! Form::close() !!}
 @endsection
 @section('scripts')
 <script>

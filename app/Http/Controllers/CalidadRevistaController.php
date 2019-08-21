@@ -76,8 +76,10 @@ class CalidadRevistaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $calidad_revista = CalidadRevista::find($id);
-        $calidad_revista->save();
+        $calidad_revista = CalidadRevista::where('care_id', $id)->first();
+        $calidad_revista->care_codigo = $request->care_codigo;
+        $calidad_revista->care_descripcion = $request->care_descripcion;
+        $calidad_revista->care_estado = $request->care_estado;
         return redirect()->route('calidad_revista.index');
     }
 

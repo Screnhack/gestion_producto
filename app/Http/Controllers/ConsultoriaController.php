@@ -61,7 +61,8 @@ class ConsultoriaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $consultoria = Consultoria::find($id)->first();
+        return view('admin.configuracion.consultoria.edit')->with('consultoria', $consultoria);
     }
 
     /**
@@ -73,7 +74,9 @@ class ConsultoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $consultoria = Consultoria::find($id);
+        $consultoria->save();
+        return redirect()->route('consultoria.index');
     }
 
     /**

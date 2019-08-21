@@ -15,7 +15,7 @@ class CuartilController extends Controller
     public function index()
     {
         $cuartil = Cuartil::orderBy('cuar_id', 'ASC')->get();
-        return view("admin.configuracion.cuartil.index");
+        return view("admin.configuracion.cuartil.index")
         ->with('cuartil',$cuartil);
     }
 
@@ -38,7 +38,7 @@ class CuartilController extends Controller
     public function store(Request $request)
     {
         $cuartil = new Cuartil($request->all());
-        $cualtil->save();
+        $cuartil->save();
         return redirect()->route('cuartil.index');
     }
 
@@ -61,8 +61,8 @@ class CuartilController extends Controller
      */
     public function edit($id)
     {
-        $cuartil = Cuartil::find($id);
-        return view('admin.configuracion.cuartil.create')->with('cuartil', $cuartil);
+        $cuartil = Cuartil::where('cuar_id', $id)->first();
+        return view('admin.configuracion.cuartil.edit')->with('cuartil', $cuartil);
     }
 
     /**
@@ -74,7 +74,8 @@ class CuartilController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $cuartil = Cuartil::find($id);
+        $cuartil = Cuartil::where('cuar_id', $id)->first();
+        dd($request->cuar_descripcion);
         $cuartil->save();
         return redirect()->route('cuartil.index');
     }

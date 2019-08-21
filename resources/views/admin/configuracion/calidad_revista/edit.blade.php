@@ -1,8 +1,7 @@
 @extends('admin.template.main')
 @section('title','FORMULARIO EDICION CALIDAD REVISTA')
 @section('content')
-							<form class="form-horizontal" role="form" action="{{route('calidad_revista.store',$calidad_revista->care_id)}}" method="POST" autocomplete="off">
-                            <input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
+							{!! Form::open(['route'=>['calidad_revista.update',$calidad_revista->care_id],'method'=> 'PUT']) !!}
                             <div class="row">
                             	<div class="form-group col-sm-6">
 									<label class="col-sm-4 control-label">Código:</label>
@@ -36,7 +35,7 @@
                             </div>
 
 					</div>
-					</form>
+					{!! Form::close() !!}
 @endsection
 @section('scripts')
 <script>

@@ -14,7 +14,7 @@ class CategoriaColcienciaController extends Controller
      */
     public function index()
     {
-        $categoriaColciencias = CategoriaColciencias::orderBy('caco_id', 'ASC')->get();
+        $categoriaColciencias = CategoriaColciencia::orderBy('caco_id', 'ASC')->get();
         return view("admin.configuracion.categoria_colciencias.index")
         ->with('categoriaColciencias',$categoriaColciencias);
     }
@@ -37,7 +37,7 @@ class CategoriaColcienciaController extends Controller
      */
     public function store(Request $request)
     {
-        $categoriaColciencias = new CategoriaColciencias($request->all());
+        $categoriaColciencias = new CategoriaColciencia($request->all());
         $categoriaColciencias->save();
         return redirect()->route('categoria_colciencias.index');
     }
@@ -61,8 +61,8 @@ class CategoriaColcienciaController extends Controller
      */
     public function edit($id)
     {
-        $categoriaColciencia = CategoriaColciencia::find($id);
-        return view('admin.configuracion.categoria_colciencias.create')->with('categoriaColciencia', $categoriaColciencia);
+        $categoria_colciencia = CategoriaColciencia::where('caco_id', $id)->first();
+        return view('admin.configuracion.categoria_colciencias.edit')->with('categoria_colciencia', $categoria_colciencia);
     }
 
     /**
@@ -74,8 +74,8 @@ class CategoriaColcienciaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $categoriaColciencia = CategoriaColciencia::find($id);
-        $categoriaColciencia->save();
+        $categoria_colciencia = CategoriaColciencia::where('caco_id', $id)->first();
+        $categoria_colciencia->save();
         return redirect()->route('categoria_colciencias.index');
     }
 

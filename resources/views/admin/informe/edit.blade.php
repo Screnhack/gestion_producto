@@ -1,6 +1,7 @@
 @extends('admin.template.main')
 @section('title','FORMULARIO INFORME')
 @section('content')
+{!! Form::open(['route'=>['informe.update',$informe->info_id],'method'=> 'PUT']) !!}
 						<form class="form-horizontal" role="form" action="{{route('informe.store')}}" method="POST" autocomplete="off">
 							<input type="text" name="_token" value="{{ csrf_token()}}" style="display: none;">
 							<div class="row">
@@ -112,7 +113,7 @@
 
 					</div>
 					<br><br><br><br><br><br><br><br><br><br>
-					</form>
+					{!! Form::close() !!}
 @endsection
 @section('scripts')
 
