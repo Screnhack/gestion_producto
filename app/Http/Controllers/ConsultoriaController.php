@@ -65,7 +65,7 @@ class ConsultoriaController extends Controller
      */
     public function edit($id)
     {
-        $consultoria = Consultoria::find($id)->first();
+        $consultoria = Consultoria::find($id);
         return view('admin.configuracion.consultoria.edit')->with('consultoria', $consultoria);
     }
 

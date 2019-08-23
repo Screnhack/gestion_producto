@@ -60,7 +60,7 @@ class RevistaController extends Controller
      */
     public function edit($id)
     {
-        $revista = Revista::where('revi_id',$id)->first();
+        $revista = Revista::find($id);
         return view('admin.configuracion.revistas.edit')->with('revista', $revista);
     }
 
@@ -73,7 +73,10 @@ class RevistaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $revista = Revista::where('revi_id',$id)->first();
+        $revista = Revista::find($id);
+        $revista->revi_codigo = $request->revi_codigo;
+        $revista->revi_descripcion = $request->revi_descripcion;
+        $revista->revi_estado = $request->revi_estado;
         $revista->save();
         return redirect()->route('revistas.index');
     }

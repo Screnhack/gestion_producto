@@ -8,6 +8,8 @@ class TipologiaProducto extends Model
 {
     //
     protected $table = 'tipologia_producto';
+
+    protected $primaryKey = 'tipr_id';
     /* campos que seran  traidos de la base de datos para generar la interaccion */
     protected $fillable = ['tipr_id','tipr_descripcion','tipr_codigo','tipr_estado'];
 }

@@ -61,7 +61,7 @@ class CategoriaColcienciaController extends Controller
      */
     public function edit($id)
     {
-        $categoria_colciencia = CategoriaColciencia::where('caco_id', $id)->first();
+        $categoria_colciencia = CategoriaColciencia::find($id);
         return view('admin.configuracion.categoria_colciencias.edit')->with('categoria_colciencia', $categoria_colciencia);
     }
 
@@ -74,7 +74,10 @@ class CategoriaColcienciaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $categoria_colciencia = CategoriaColciencia::where('caco_id', $id)->first();
+        $categoria_colciencia = CategoriaColciencia::find($id);
+        $categoria_colciencia->caco_codigo = $request->caco_codigo;
+        $categoria_colciencia->caco_descripcion = $request->caco_descripcion;
+        $categoria_colciencia->caco_estado = $request->caco_estado;
         $categoria_colciencia->save();
         return redirect()->route('categoria_colciencias.index');
     }

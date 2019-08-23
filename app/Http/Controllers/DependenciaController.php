@@ -49,7 +49,7 @@ class DependenciaController extends Controller
      */
     public function edit($id)
     {
-        $dependencia = Dependencia::where('depe_id', $id)->first();
+        $dependencia = Dependencia::find($id);
         return view('admin.configuracion.dependencias.edit')->with('dependencia', $dependencia);
     }
 
@@ -62,7 +62,10 @@ class DependenciaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $dependencia = Dependencia::where('depe_id', $id)->first();
+        $dependencia = Dependencia::find($id);
+        $dependencia->depe_codigo = $request->depe_codigo;
+        $dependencia->depe_descripcion = $request->depe_descripcion;
+        $dependencia->depe_estado = $request->depe_estado;
         $dependencia->save();
         return redirect()->route('dependencias.index');
     }
