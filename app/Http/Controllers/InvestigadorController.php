@@ -32,7 +32,7 @@ class InvestigadorController extends Controller
         $cargas_horarias = DB::table('carga_horaria')->get();
         $categorias_colciencias = DB::table('categoria_colciencias')->get();
         $programas = DB::table('programas')->get();
-        $dependencias = DB::table('dependencias')->get();
+        $dependencias = DB::table('dependencia')->get();
         $categorias_profesores = DB::table('categoria_profesor')->get();
         $grupos_investigacion = DB::table('grupo_investigacion')->get();
         return view("admin.investigador.create")
